@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Selector</title>
+    <style>
+        div {
+            /* Element Selector */
+            background-color: red;
+        }
+
+        .green {
+            /* Class Selector */
+            background-color: green;
+        }
+
+        #yellow {
+            /* ID Selector */
+            background-color: yellow;
+        }
+
+        div>p {
+            /* Child Selector */
+            color: blue;
+            background-color: black;
+        }
+
+        div p {
+            /* Descendant Selector */
+            color: white;
+            background-color: rgba(35, 51, 173, 0.895);
+        }
+
+        * {
+            /* Universal Selector */
+            margin: 10;
+            padding: 10;
+        }
+        /* pseudo-selector */
+        a:visited{
+            color: red;
+        }
+        a:link {
+            color: green;
+        }
+        a:active {
+            background-color: red;
+        } 
+        a:hover {
+            background-color: rgb(89, 0, 255);
+        }
+        p:first-child {
+            background-color: rgb(41, 45, 31);
+        }
+
+    </style>
 </head>
+
 <body>
-    
+    <main class="one">
+        <p>I am the first child</p>
+        <p>I am the second child</p>
+
+
+    </main>
+    <div>
+        Hey this is Element Selector Avijit
+
+        <p>Hey this is Descendant Selector Avijit</p>
+
+    </div>
+    <br>
+
+    <div class="green">
+        Hey this is class selector Avijt Pandey
+    </div>
+    <br>
+    <div id="yellow">
+        Hi this is id selector
+    </div>
+
+        <a href="https://www.google.com/">Go to Google</a>
+        <a href="https://www.facebook.com">Go to Facebook</a>
+    <div class="one">
+        I am one
+    </div>
 </body>
+
 </html>

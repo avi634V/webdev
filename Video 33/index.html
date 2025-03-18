@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+
+    <style>
+
+        :root {
+            --primary-color: rgba(16, 105, 145, 0.428);
+            --secondary-color: rgb(0, 251, 255);
+            --third-color: rgb(0, 255, 68);
+            --fourth-color: rgb(106, 0, 255);
+            --bgcolor:rgb(251, 237, 251);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: var(--bgcolor);
+            padding: 25px;
+            margin:0px;
+
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 40px;
+            color: black;
+            font-size: 10px;
+            font-weight: bold;
+            border: none;
+        }
+
+        ul li:nth-child(1) {
+            background-color: var(--primary-color);
+        }
+
+        ul li:nth-child(2) {
+            background-color: var(--secondary-color);
+        }
+
+        ul li:nth-child(3) {
+            background-color: var(--third-color);
+        }
+
+        ul li:nth-child(4) {
+            background-color: var(--fourth-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

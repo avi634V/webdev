@@ -7,14 +7,18 @@
     <title>Exercise</title>
 
     <style>
+        body {
+            background-color: rgb(242, 249, 249);
+        }
 
         :root {
             --primary-color: rgba(16, 105, 145, 0.428);
             --secondary-color: rgb(0, 251, 255);
             --third-color: rgb(0, 255, 68);
             --fourth-color: rgb(106, 0, 255);
-            --bgcolor:rgb(251, 237, 251);
+            --bgcolor: rgb(251, 237, 251);
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +27,7 @@
         .nav {
             background-color: var(--bgcolor);
             padding: 25px;
-            margin:0px;
+            margin: 0px;
 
         }
 
@@ -34,13 +38,15 @@
 
         ul li {
             list-style: none;
-            padding: 10px;
+            padding: 23px;
             border: 2px solid white;
             border-radius: 40px;
             color: black;
             font-size: 10px;
             font-weight: bold;
             border: none;
+            display: inline;
+
         }
 
         ul li:nth-child(1) {

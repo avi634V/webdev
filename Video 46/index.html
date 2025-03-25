@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS</title>
+
+    <style>
+        .container {
+            height: 80vh;
+            width: 40vw;
+            background-color: greenyellow;
+
+        }
+
+        .box {
+
+            height: 34px;
+            width: 45px;
+            /* animation-name: firstanimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            animation-delay: 2s;
+            animation-direction: reverse;
+            animation-direction:alternate-reverse ;
+            animation-play-state: paused; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: firstanimation 3s ease-in-out 3s 2 ,
+                        secondanimation 3s ease-in 3s 2 ;
+
+
+        }
+
+        /* animation class */
+        @keyframes firstanimation {
+            from {
+                background-color: red;
+            }
+            to {
+                /* transform: translateX(1000px); */
+                background-color: yellow;
+            }
+        }
+        @keyframes secondanimation {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+
+            }
+            50%{
+                transform: rotate(280deg);
+
+            }
+            80%{
+                transform: rotate(300deg);
+
+            }
+            100%{
+                transform: rotate(310deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventn bubbling</title>
+    <style>
+        .child {
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+
+        }
+
+        .childContainer {
+            background-color: lightgreen;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+        }
+
+        .container {
+            background-color: lightyellow;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // document.querySelector(".child").addEventListener("click", function () {
+        //     alert("Child clicked");
+        // });
+
+
+        // document.querySelector(".childContainer").addEventListener("click", function () {
+        //     alert("Child container clicked");
+        // });
+
+        // document.querySelector(".container").addEventListener("click", function () {
+        //     alert("container clicked");
+        // });
+
+
+
+        // event bubbling stop via propagation and adding event.stopPropagation
+        document.querySelector(".child").addEventListener("click", function (e) {
+            e.stopPropagation();// this will stop the event bubbling
+            alert("Child clicked");
+        });
+
+
+        document.querySelector(".childContainer").addEventListener("click", function () {
+            e.stopPropagation();// this will stop the event bubbling
+
+            alert("Child container clicked");
+        });
+
+        document.querySelector(".container").addEventListener("click", function () {
+            // e.stopPropagation();// this will stop the event bubbling
+
+            alert("container clicked");
+        });
+
+        function getRandomColor() {
+            let a = Math.ceil(0 + Math.random() * 255);
+            let b = Math.ceil(0 + Math.random() * 255);
+            let c = Math.ceil(0 + Math.random() * 255);
+
+            return `rgb(${a},${b},${c})`;
+        }
+        // setInterval(() => {
+        //     document.querySelector(".childContainer").style.background = getRandomColor();
+        // }, 1000);
+
+        //  let a= setInterval(() => {
+        //     document.querySelector(".childContainer").style.background = getRandomColor();
+        // }, 1000);
+        // console.log(a); 
+        // clearInterval(a); // this will stop the interval
+
+        let a= setTimeout(() => {
+            document.querySelector(".childContainer").style.background = getRandomColor();
+        }, 5000);
+        console.log(a); 
+        // clearTimeout(a); // this will stop the interval
+
+    </script>
+</body>
+
+</html>
